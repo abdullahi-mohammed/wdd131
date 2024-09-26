@@ -1,0 +1,77 @@
+header {
+  background: #50ad2c;
+  text-align: center;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 10px;
+  padding: 0 12px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+}
+
+section.card {
+  border: 1px solid #50ad2c;
+  padding: 16px;
+  margin: 24px 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 12px;
+  max-width: 1240px;
+  margin: auto;
+}
+
+section h2 {
+  margin: 0;
+  padding: 4px 0;
+  text-align: center;
+  background-color: #50ad2c;
+}
+
+.about_me_paragraph {
+  display: flex;
+  gap: 30px;
+  padding: 18px;
+}
+.author_image {
+  /* padding: 18px; */
+}
+
+.country_flag {
+  float: left;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 18px;
+  gap: 12px;
+}
+
+.card_3 div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+footer {
+  text-align: center;
+  background-color: #50ad2c;
+  color: white;
+  padding: 4px;
+}
