@@ -5,6 +5,10 @@ header {
   border-radius: 8px;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 header nav ul {
   display: flex;
   justify-content: space-between;
@@ -47,9 +51,6 @@ section h2 {
   display: flex;
   gap: 30px;
   padding: 18px;
-}
-.author_image {
-  /* padding: 18px; */
 }
 
 .country_flag {
