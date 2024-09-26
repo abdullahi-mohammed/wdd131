@@ -24,6 +24,14 @@ nav ul {
 nav li a {
   color: white;
   text-decoration: none;
+  padding: 4px;
+}
+
+nav li a:hover {
+  color: #50ad2c;
+  background-color: white;
+  padding: 4px;
+  border-radius: 8px;
 }
 
 section.card {
