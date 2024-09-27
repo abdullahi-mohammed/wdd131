@@ -9,7 +9,7 @@ footer {
   margin: 1rem auto;
   border: 1px solid grey;
   padding: 8px;
-  background-color: rgba(47, 47, 124, 0.781);
+  background-color: rgba(175, 175, 206, 0.781);
 }
 
 main {
@@ -19,6 +19,6 @@ main {
 }
 
 section {
-  background-color: rgb(59, 59, 218);
+  background-color: #fff;
   padding: 4px;
 }
