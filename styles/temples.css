@@ -4,13 +4,18 @@
   /* padding: 0; */
 }
 
+:root {
+  --background-color: purple;
+  --color: white;
+}
+
 header {
-  background-color: purple;
+  background-color: var(--background-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 8px 18px;
-  color: white;
+  color: var(--color);
   margin: 0;
   overflow: hidden;
 }
@@ -25,7 +30,7 @@ nav {
   transform: translateX(100%);
   position: absolute;
   top: 45px;
-  background-color: purple;
+  background-color: var(--background-color);
   /* width: 100%; */
   left: 0;
   right: 0;
@@ -33,7 +38,7 @@ nav {
 }
 
 nav a {
-  color: white;
+  color: var(--color);
   text-decoration: none;
 }
 
@@ -79,7 +84,7 @@ main > div > figure {
 }
 
 footer {
-  background-color: purple;
+  background-color: var(--background-color);
   padding: 4px 12px;
   color: white;
   text-align: center;
