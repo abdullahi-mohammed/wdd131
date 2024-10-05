@@ -9,6 +9,10 @@
   --color: white;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 header {
   background-color: var(--background-color);
   display: flex;
