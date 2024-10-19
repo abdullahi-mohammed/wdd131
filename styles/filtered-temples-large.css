@@ -1,0 +1,22 @@
+@media screen and (min-width: 768px) {
+  main > div {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  nav > ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  #nav {
+    display: block !important;
+    position: static;
+    transform: unset;
+  }
+}
