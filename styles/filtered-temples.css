@@ -44,6 +44,7 @@ nav {
 nav a {
   color: var(--color);
   text-decoration: none;
+  cursor: pointer;
 }
 
 nav a:hover {
