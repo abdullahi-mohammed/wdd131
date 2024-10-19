@@ -85,6 +85,17 @@ main > div {
 
 main > div > figure {
   margin-bottom: 32px;
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  object-fit: cover;
+  max-height: 200px;
 }
 
 footer {

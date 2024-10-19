@@ -5,6 +5,11 @@ const currentYear = document.querySelector('#currentyear');
 const lastModified = document.querySelector('#lastmodified');
 
 const temple = document.querySelector('#temples');
+const homeTag = document.querySelector('#home');
+const oldTag = document.querySelector('#old');
+const newTag = document.querySelector('#new');
+const largeTag = document.querySelector('#large');
+const smallTag = document.querySelector('#small');
 
 hamburgerButton.addEventListener('click', function () {
     nav.classList.toggle('show')
@@ -100,16 +105,44 @@ const temples = [
     // Add more temple objects here...
 ];
 
-const res = temples.map((item, i) => {
-    return (`<figure>
-        <h2>${item.templeName}</h2>
-        <br>
-        <p>LOCATION: ${item.location}</p>
-        <p>DEDICATED: ${item.dedicated}</p>
-        <p>SIZE: ${item.area} sq ft</p>
-                <img loading='lazy' src=${item.imageUrl} width='200px' alt=${item.templeName}>
-            </figure>`)
+function renderTemples(temples) {
+    return temples.map((item, i) => {
+        return (`<figure>
+            <h2>${item.templeName}</h2>
+            <br>
+            <p>LOCATION: ${item.location}</p>
+            <p>DEDICATED: ${item.dedicated}</p>
+            <p>SIZE: ${item.area} sq ft</p>
+                    <img loading='lazy' src="${item.imageUrl}" width='200px' alt="${item.templeName}">
+                </figure>`)
 
-}).join("")
+    }).join("")
+}
 
-temple.innerHTML = res
+homeTag.addEventListener("click", () => {
+    temple.innerHTML = renderTemples(temples)
+})
+
+oldTag.addEventListener("click", () => {
+    const res = temples.filter((item, i) => new Date(item.dedicated).getFullYear() < 1900)
+    temple.innerHTML = renderTemples(res)
+
+})
+
+newTag.addEventListener("click", () => {
+    const res = temples.filter((item, i) => new Date(item.dedicated).getFullYear() > 2000)
+    temple.innerHTML = renderTemples(res)
+})
+
+largeTag.addEventListener("click", () => {
+    const res = temples.filter((item, i) => item.area > 90000)
+    temple.innerHTML = renderTemples(res)
+
+})
+
+smallTag.addEventListener("click", () => {
+    const res = temples.filter((item, i) => item.area < 10000)
+    temple.innerHTML = renderTemples(res)
+})
+
+temple.innerHTML = renderTemples(temples)
