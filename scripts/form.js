@@ -26,38 +26,36 @@ const products = [
     }
 ];
 
-const productTag = document.getElementById('product')
-const submitTag = document.getElementById('submit')
-let date = new Date()
+let select = document.querySelector('#product');
+const submitTag = document.getElementById('submit');
+let date = new Date();
 
-let currentyearTag = document.getElementById('currentyear')
-let lastmodifiedTag = document.getElementById('lastmodified')
+let currentyearTag = document.getElementById('currentyear');
+let lastmodifiedTag = document.getElementById('lastmodified');
 
-currentyearTag.innerHTML = date.getFullYear()
-lastmodifiedTag.innerHTML = `Last Modified - ${new Intl.DateTimeFormat("en-US", { dateStyle: "short", timeStyle: "medium" }).format('2024, oct, 4')}`
+currentyearTag.innerHTML = date.getFullYear();
+lastmodifiedTag.innerHTML = `Last Modified - ${new Intl.DateTimeFormat("en-US", { dateStyle: "short", timeStyle: "medium" }).format(new Date('2024-10-04'))}`;
 
-let counter = 0
+let counter = 0;
 
 submitTag.addEventListener('click', (e) => {
-    e.preventDefault()
+    // e.preventDefault();
     try {
-        let counter = counter + 1
-        submitTag.textContent = counter
-
+        counter = localStorage.getItem('counter')
+        counter = +counter + 1;
+        localStorage.setItem('counter', counter)
     } catch (error) {
         console.log(error);
     }
-})
+});
 
 function addProduct() {
-    // the page does not like when i remove i++
     for (let i = 0; i < products.length; i++) {
-        let optnElem = document.createElement('option'); // create the new element
-        // the option's textContent is the name key's value
+        let optnElem = document.createElement('option');
         optnElem.textContent = products[i].name;
-        optnElem.value = products[i].id; // 
-        productTag.appendChild(optnElem); // add it to the parent which was given the variable name 'select' up there
+        optnElem.value = products[i].id;
+        select.appendChild(optnElem);
     }
-};
+}
 
-addProduct(); // give the function life
+addProduct();
