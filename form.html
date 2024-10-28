@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <meta name="description" content="product revie form">
+    <meta name="author" content="abdullahi">
+    <link rel="stylesheet" href="./styles/form.css">
+    <script defer src="./scripts/form.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <h2>Product Review</h2>
+    <form action="./review.html" method="get">
+        <label class="product" for="product">
+            <h3>Product Name</h3>
+            <select name="choose Product" id="product" required>
+                <option value="">Choose a product...</option>
+                <option value="bag">Bag</option>
+                <option value="shoe">shoe</option>
+            </select>
+        </label>
+        <div class="rating">
+            <h3>Overall Rating</h3>
+            <div>
+                <label for="rate1">
+                    <p>⭐</p>
+                    <input type="radio" name="rate" id="rate1" required>
+                </label>
+                <label for="rate2">
+                    <p>⭐⭐</p>
+                    <input type="radio" name="rate" id="rate2" required>
+                </label>
+                <label for="rate3">
+                    <p>⭐⭐⭐</p>
+                    <input type="radio" name="rate" id="rate3" required>
+                </label>
+                <label for="rate4">
+                    <p>⭐⭐⭐⭐</p>
+                    <input type="radio" name="rate" id="rate4" required>
+                </label>
+                <label for="rate5">
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <input type="radio" name="rate" id="rate5" required>
+                </label>
+            </div>
+        </div>
+        <label class="date" for="date">
+            <h3>Date of Installment</h3>
+            <input type="date" name="" id="">
+        </label>
+        <div class="feature">
+            <h3 for="features">Which feature did you find usefull in the product <i>(check all That apply)</i></h3>
+            <div>
+                <label for="durability"><input type="checkbox" name="" id="durability">
+                    <h4>Durability</h4>
+                </label>
+                <label for="use"><input type="checkbox" name="" id="use">
+                    <h4>Ease of Use</h4>
+                </label>
+                <label for="performance"><input type="checkbox" name="" id="performance">
+                    <h4>Performance</h4>
+                </label>
+                <label for="design"><input type="checkbox" name="" id="design">
+                    <h4>Design</h4>
+                </label>
+            </div>
+        </div>
+        <label class="review" for="">
+            <h3>Writen Review (optional)</h3>
+            <textarea name="" rows="6"></textarea>
+        </label>
+        <label class="name" for="">
+            <h3>Your Name(optional)</h3>
+            <input type="text" name="" id="">
+        </label>
+        <div class="button"><input id="submit" type="submit" value="Post Review"></div>
+    </form>
+
+    <footer>
+        <p><span id="currentyear"></span> | Abdullahi Mohammed | Ilorin, Nigeria</p>
+        <p id="lastmodified"></p>
+    </footer>
+</body>
+
+</html>

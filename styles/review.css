@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 768px;
+  width: 100%;
+  font-family: "Roboto", serif;
+}
+
+form input,
+form select,
+form textarea {
+  border: none;
+  outline: none;
+  padding: 8px;
+  resize: none;
+}
+
+body > h2 {
+  background-color: burlywood;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+body > footer {
+  background-color: burlywood;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
