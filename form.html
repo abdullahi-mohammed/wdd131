@@ -19,7 +19,7 @@
 
 <body>
     <h2>Product Review</h2>
-    <form action="review.html" method="get">
+    <form action="review.html" onsubmit="return submitReview()" method="get">
         <label class="product" for="product">
             <h3>Product Name</h3>
             <select name="choose Product" id="product" required>
@@ -31,43 +31,43 @@
             <div>
                 <label for="rate1">
                     <p>⭐</p>
-                    <input type="radio" name="rate" id="rate1" required>
+                    <input type="radio" value="1" name="rate" id="rate1" required>
                 </label>
                 <label for="rate2">
                     <p>⭐⭐</p>
-                    <input type="radio" name="rate" id="rate2" required>
+                    <input type="radio" value="2" name="rate" id="rate2" required>
                 </label>
                 <label for="rate3">
                     <p>⭐⭐⭐</p>
-                    <input type="radio" name="rate" id="rate3" required>
+                    <input type="radio" value="3" name="rate" id="rate3" required>
                 </label>
                 <label for="rate4">
                     <p>⭐⭐⭐⭐</p>
-                    <input type="radio" name="rate" id="rate4" required>
+                    <input type="radio" value="4" name="rate" id="rate4" required>
                 </label>
                 <label for="rate5">
                     <p>⭐⭐⭐⭐⭐</p>
-                    <input type="radio" name="rate" id="rate5" required>
+                    <input type="radio" value="5" name="rate" id="rate5" required>
                 </label>
             </div>
         </div>
         <label class="date" for="date">
             <h3>Date of Installment</h3>
-            <input type="date" name="" id="">
+            <input type="date" value="2024/10/22" name="" id="">
         </label>
         <div class="feature">
             <h3 for="features">Which feature did you find usefull in the product <i>(check all That apply)</i></h3>
             <div>
-                <label for="durability"><input type="checkbox" name="" id="durability">
+                <label for="durability"><input value="durability" type="checkbox" name="feature" id="durability">
                     <h4>Durability</h4>
                 </label>
-                <label for="use"><input type="checkbox" name="" id="use">
+                <label for="use"><input value="ease of use" type="checkbox" name="feature" id="use">
                     <h4>Ease of Use</h4>
                 </label>
-                <label for="performance"><input type="checkbox" name="" id="performance">
+                <label for="performance"><input value="performance" type="checkbox" name="feature" id="performance">
                     <h4>Performance</h4>
                 </label>
-                <label for="design"><input type="checkbox" name="" id="design">
+                <label for="design"><input value="design" type="checkbox" name="feature" id="design">
                     <h4>Design</h4>
                 </label>
             </div>
@@ -80,7 +80,7 @@
             <h3>Your Name(optional)</h3>
             <input type="text" name="" id="">
         </label>
-        <div class="button"><input id="submit" type="submit" value="Post Review"></div>
+        <div class="button"><input type="submit" value="Post Review"></div>
     </form>
 
     <footer>

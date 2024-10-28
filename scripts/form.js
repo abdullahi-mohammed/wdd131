@@ -27,7 +27,6 @@ const products = [
 ];
 
 let select = document.querySelector('#product');
-const submitTag = document.getElementById('submit');
 let date = new Date();
 
 let currentyearTag = document.getElementById('currentyear');
@@ -38,8 +37,8 @@ lastmodifiedTag.innerHTML = `Last Modified - ${new Intl.DateTimeFormat("en-US", 
 
 let counter = 0;
 
-submitTag.addEventListener('click', (e) => {
-    // e.preventDefault();
+
+const submitReview = () => {
     try {
         counter = localStorage.getItem('counter')
         counter = +counter + 1;
@@ -47,7 +46,8 @@ submitTag.addEventListener('click', (e) => {
     } catch (error) {
         console.log(error);
     }
-});
+}
+
 
 function addProduct() {
     for (let i = 0; i < products.length; i++) {
