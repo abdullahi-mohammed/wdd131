@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --button-color: blue;
+}
+
+body {
+  max-width: 1200px;
+  width: 98%;
+  margin: 0 auto;
+  font-family: "Roboto", serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+}
+
+header button {
+  padding: 8px 24px;
+  appearance: none;
+  background-color: var(--button-color);
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+main {
+  margin: 20px auto;
+  max-width: 800px;
+  width: 100%;
+}
+
+main form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+form label {
+  width: 100%;
+}
+
+form input,
+textarea {
+  width: 100%;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid;
+}
+
+form textarea {
+  resize: none;
+}
+
+main form button {
+  width: 40%;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 18px;
+  border: none;
+  background-color: var(--button-color);
+  appearance: none;
+  color: whitesmoke;
+}
+
+body > footer {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}

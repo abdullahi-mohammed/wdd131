@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Blog Post</title>
+    <meta name="description" content="community blog page">
+    <meta name="author" content="Abdullahi">
+    <link rel="stylesheet" href="./styles/new-post.css">
+    <script defer src="./scripts/new-post.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <form action="index.html" method="get">
+            <button>Back</button>
+        </form>
+        <h1>New Blog Post</h1>
+    </header>
+    <hr>
+    <main>
+        <form action="index.html" method="get" onsubmit="return postBlog(e)">
+            <label for="title">Title
+                <input type="text" value="" name="title" id="title" required>
+            </label>
+            <label for="image">Image
+                <input type="url" value="" id="blogUrl" name="imageUrl" alt="image url" required>
+            </label>
+            <label for="text">Texts
+                <textarea name="blogContent" value="" rows="15" id="blogContent" required></textarea>
+            </label>
+            <button id="submitBlog" type="submit">Post New Blog</button>
+        </form>
+    </main>
+    <hr>
+    <footer>
+        <p><span id="currentyear"></span> | Abdullahi Mohammed | Ilorin, Nigeria</p>
+        <p id="lastmodified"></p>
+    </footer>
+</body>
+
+</html>
