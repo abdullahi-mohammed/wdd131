@@ -17,7 +17,7 @@ const displayBlogs = () => {
         // Create a div element for each blog item
         let blogDiv = document.createElement('div');
         blogDiv.innerHTML = `
-            <img src="${item.blogUrl}" alt="${item.title} image">
+            <img src="${item.blogUrl}" alt="${item.title} image" loading="lazy">
             <div class="blog_title">
                 <h4>${item.title}</h4> <span>${item.date}</span>
             </div>

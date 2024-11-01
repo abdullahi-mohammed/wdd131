@@ -15,6 +15,14 @@ body {
   font-family: "Roboto", serif;
 }
 
+h1 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -67,4 +75,13 @@ body > footer {
   width: 100%;
   padding: 10px;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 18px;
+  }
 }
